@@ -170,11 +170,6 @@ int32_t main() {
         map[n] += '*';
     }
     forStart();
-//    screen[0][0] = '#';
-//    screen[H - 1][0] = '#';
-//    screen[0][W - 1] = '#';
-//    screen[H - 1][W - 1] = '#';
-//    reverse(map.begin(), map.end());
     for (int i = 0; i < n; ++i) {
         int x = -1;
         for (int j = 0; j < m; ++j) {
@@ -235,9 +230,13 @@ int32_t main() {
             person.e = Line(person.p, person.p + person.Vec);
             timer++;
         } else if (c == 's' || c == 'S') {
-            move.p = move.p - move.Vec;
-            person.p = move.p;
-            timer++;
+            person.Vec.x *= -1, person.Vec.y *= -1;
+            if (minDistance(edges, person) > 6.3) {
+                move.p = move.p - move.Vec;
+                person.p = move.p;
+                timer++;
+            }
+            person.Vec.x *= -1, person.Vec.y *= -1;
         }
         Ray a = person;
         a.Vec.rotate(-50 * PI / 180);
@@ -279,15 +278,3 @@ int32_t main() {
         output();
     }
 }
-
-//10 10
-//##########
-//#....##..#
-//#...#..###
-//#...#...##
-//#...@....#
-//#.....####
-//###....###
-//#....###.#
-//#........#
-//##########
