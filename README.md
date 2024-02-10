@@ -1,6 +1,6 @@
 # pseudo-3d
 Псевдо 3д графика
-![image](https://github.com/ARGimadeyev/pseudo-3d/assets/105931063/9d5a651e-5b5f-4f88-989a-cb648e241d48)
+![изображение](https://github.com/ARGimadeyev/pseudo-3d/assets/105931063/027504ff-fe95-45f6-99d1-3dd3d8fd6cf0)
 
 ## Карта
  В файл Input.txt вы можете нарисовать свою карту.
